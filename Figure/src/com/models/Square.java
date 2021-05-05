@@ -4,6 +4,7 @@ public class Square extends Figure {
     public double firstSide;
 
     public Square (double firstSide) {
+        this.type = FigureType.Square;
         this.firstSide = firstSide;
     }
 
@@ -16,9 +17,5 @@ public class Square extends Figure {
     public double area() {
         var result = Math.pow(firstSide, 2);
         return result;
-    }
-    @Override
-    public String getFigureType() {
-        return "Квадрат";
     }
 }

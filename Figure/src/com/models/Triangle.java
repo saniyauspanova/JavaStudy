@@ -5,6 +5,7 @@ public class Triangle extends Figure {
     public double secondSide;
     public double thirdSide;
     public Triangle (double firstSide, double secondSide, double thirdSide ) {
+        this.type = FigureType.Triangle;
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.thirdSide = thirdSide;
@@ -19,9 +20,5 @@ public class Triangle extends Figure {
         var halfPerimetr = firstSide + secondSide + thirdSide;
         var result = Math.sqrt(halfPerimetr* (halfPerimetr - firstSide) * (halfPerimetr - secondSide) *(halfPerimetr - thirdSide));
         return result;
-    }
-    @Override
-    public String getFigureType() {
-        return "Треугольник";
     }
 }

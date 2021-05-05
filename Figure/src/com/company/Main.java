@@ -6,18 +6,14 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import com.models.Circle;
-import com.models.Figure;
-import com.models.Square;
-import com.models.Triangle;
-import com.models.Restangle;
+import com.models.*;
 
 public class Main {
 
     public static void main(String[] args) {
         Predicate<Double> isNotPositive = x -> x < 0;
 
-        Consumer<Figure> figureInfo = x-> System.out.printf("Тип фигуры: %s \nПериметр: %f \nПлощадь: %f ", x.getFigureType(), x.perimetr(),  x.area());
+        Consumer<Figure> figureInfo = x-> System.out.printf("Тип фигуры: %s \nПериметр: %f \nПлощадь: %f ", x.type.getNameRus(), x.perimetr(),  x.area());
 
 
         Supplier<Double> inputSide = ()-> {

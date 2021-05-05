@@ -5,6 +5,7 @@ public class Restangle extends Figure {
     public double secondSide;
 
     public Restangle (double firstSide, double secondSide) {
+        this.type = FigureType.Restangle;
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -18,9 +19,5 @@ public class Restangle extends Figure {
     public double area() {
         var result = firstSide * secondSide;
         return result;
-    }
-    @Override
-    public String getFigureType() {
-        return "Прямоугольник";
     }
 }
